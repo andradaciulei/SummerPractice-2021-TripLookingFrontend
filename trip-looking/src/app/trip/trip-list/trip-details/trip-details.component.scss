@@ -1,0 +1,48 @@
+.trip-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 200px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 8px;
+    padding: 16px;
+
+
+    .title-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 40px;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 16px;
+
+        .remove-button {
+            background-color: transparent;
+            border: none;
+            color: red;
+            cursor: pointer;
+        }
+    }
+
+    .description-container {
+        display: flex;
+        flex-direction: column;
+
+        .bold-element {
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+    }
+
+    .private-container {
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+
+        input {
+            margin:0 0 0 8px;
+        }
+    }
+}
