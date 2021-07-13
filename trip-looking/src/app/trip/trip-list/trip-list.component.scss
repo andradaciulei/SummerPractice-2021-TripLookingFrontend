@@ -1,17 +1,44 @@
 .title-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 
 .trips-list {
-    display: flex;
-    justify-content: space-between;
-    flex-flow: wrap;
-  
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
 
-    app-trip-details {
-        margin-bottom: 32px;
-    }
+
+  app-trip-details {
+    margin-bottom: 32px;
+  }
+}
+
+.filter-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 32px;
+}
+
+.form-section {
+  background-color: white;
+  padding: 32px;
+
+  label {
+    color: black;
+    margin-right: 8px;
+  }
+
+  .form-element {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  button {
+    background-color: green;
+  }
 }
