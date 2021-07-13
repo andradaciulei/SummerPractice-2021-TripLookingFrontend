@@ -1,0 +1,17 @@
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.trips-list {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+  
+
+    app-trip-details {
+        margin-bottom: 32px;
+    }
+}
