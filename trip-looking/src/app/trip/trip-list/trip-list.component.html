@@ -4,12 +4,51 @@
 
 
 
-<div class="filter-section">
+<div class="form-section">
+  <form [formGroup]="formGroup"
+        (ngSubmit)="onSubmit()">
+    <div class="form-element">
 
+      <label>
+        Title
+      </label>
+      <input type="text"
+             placeholder="Enter a title"
+             formControlName="title">
+      <div *ngIf="formGroup.get('title').errors?.minlength">
+        This input is invalid
+      </div>
 
+    </div>
+    <div class="form-element">
 
+      <label>
+        Description
+      </label>
+      <input type="text"
+             placeholder="Enter a description"
+             formControlName="description">
+
+    </div>
+    <div class="form-element">
+
+      <label>
+        Is this private?
+      </label>
+      <input type="checkbox"
+             formControlName="private">
+    </div>
+
+    <button type="submit">
+      Submit
+    </button>
+  </form>
 </div>
 
+<div class="filter-section">
+  <input type="text" [(ngModel)]="modelInput" (ngModelChange)="onModelChange()" placeholder="Search a trip"
+   maxLength="5">
+</div>
 
 <div class="trips-list">
   <app-trip-details *ngFor="let trip of tripList"
@@ -20,8 +59,6 @@
 </div>
 
 
-<button (click)="createTrip()">
+<!-- <button (click)="createTrip()">
   Create trip
-</button>
-
-
+</button> -->
