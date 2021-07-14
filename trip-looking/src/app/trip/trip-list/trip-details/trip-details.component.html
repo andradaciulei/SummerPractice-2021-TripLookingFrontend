@@ -1,15 +1,23 @@
 <div class="trip-container">
-    <div class="title-container">
+  <div class="title-container">
+      {{trip?.title}}
+      <button class="remove-button"
+      (click)="onClick()"><i class="fa fa-trash"></i></button>
+  </div>
 
-        <button class="remove-button"><i class="fa fa-trash"></i></button>
-    </div>
 
-    <div class="description-container">
-        <span class="bold-element">Description</span>
 
-    </div>
+  <div class="description-container">
+      <span class="bold-element">Description</span>
+      {{trip?.description}}
+  </div>
 
-    <div class="private-container">
-        <label>Is this trip private? </label>
-    </div>
+
+
+  <div class="private-container">
+      <label>Is this trip private? </label>
+      <input type="checkbox"
+             [checked]="trip.private"
+             disabled>
+  </div>
 </div>

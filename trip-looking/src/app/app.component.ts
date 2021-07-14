@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  public test: number = 0;
+  public showList: boolean = true;
+
+  constructor(){
+    setTimeout(
+      () => {
+        this.test = 10;
+      }
+    , 1000)
+  }
+
   title = 'trip-looking';
 }

@@ -3,5 +3,17 @@
 </div>
 
 
+
+<div class="filter-section">
+
+
+
+</div>
+
+
 <div class="trips-list">
+  <app-trip-details *ngFor="let trip of tripList"
+                    [trip]="trip"
+                    (onDeleteClicked)="onDeleteClick($event)">
+  </app-trip-details>
 </div>

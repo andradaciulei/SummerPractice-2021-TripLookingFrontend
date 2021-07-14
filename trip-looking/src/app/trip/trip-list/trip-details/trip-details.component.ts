@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+
 
 @Component({
   selector: 'app-trip-details',
@@ -7,5 +8,13 @@ import { Component } from '@angular/core';
 })
 export class TripDetailsComponent {
 
-  constructor() { }
+  @Input() trip: any;
+  @Output() onDeleteClicked: EventEmitter<string> = new EventEmitter<string>();
+
+  constructor() {
+  }
+
+  onClick(): void {
+    this.onDeleteClicked.emit(this.trip.id);
+  }
 }

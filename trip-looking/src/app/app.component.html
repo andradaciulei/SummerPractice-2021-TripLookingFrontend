@@ -1,1 +1,6 @@
-<app-trip-list></app-trip-list>
+<app-trip-list *ngIf="this.showList" [test]="test"></app-trip-list>
+
+
+<button (click)="showList = !showList">
+ Show List
+</button>
