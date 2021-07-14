@@ -14,6 +14,14 @@
 <div class="trips-list">
   <app-trip-details *ngFor="let trip of tripList"
                     [trip]="trip"
-                    (onDeleteClicked)="onDeleteClick($event)">
+                    (onDeleteClicked)="onDeleteClick($event)"
+                    (onUpdateClicked)="updateTrip($event)">
   </app-trip-details>
 </div>
+
+
+<button (click)="createTrip()">
+  Create trip
+</button>
+
+
