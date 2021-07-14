@@ -1,28 +1,26 @@
 <div class="trip-container">
   <div class="title-container">
-      {{trip?.title}}
-      <button class="remove-button"
-      (click)="onClick()"><i class="fa fa-trash"></i></button>
+    {{trip?.title}}
   </div>
 
+  <button class="remove-button"
+          (click)="onClick()">
+    Delete
+  </button>
 
+  <button (click)="updateTrip()">
+    Update the first trip
+  </button>
 
   <div class="description-container">
-      <span class="bold-element">Description</span>
-      {{trip?.description}}
+    <span class="bold-element">Description</span>
+    {{trip?.description}}
   </div>
-
-
 
   <div class="private-container">
-      <label>Is this trip private? </label>
-      <input type="checkbox"
-             [checked]="trip.private"
-             disabled>
+    <label>Is this trip private? </label>
+    <input type="checkbox"
+           [checked]="trip.private"
+           disabled>
   </div>
 </div>
-
-<button (click)="updateTrip()">
-  Update the first trip
-</button>
-

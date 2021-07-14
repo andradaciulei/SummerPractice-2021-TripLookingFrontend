@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  public test: number = 0;
+  public test: number;
   public showList: boolean = true;
 
   constructor(){
